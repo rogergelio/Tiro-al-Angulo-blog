@@ -1,6 +1,5 @@
 import React from 'react';
 import { useRouter } from 'next/router';
-
 import { PostDetail, Categories, PostWidget, Author, Comments, CommentsForm, Loader } from '../../components';
 import { getPosts, getPostDetails } from '../../services';
 import { AdjacentPosts } from '../../sections';
