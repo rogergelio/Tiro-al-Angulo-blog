@@ -276,3 +276,40 @@ export const getRecentPosts = async () => {
 
   return result.posts;
 };
+
+export const getPostsTwo = async () => {
+  const query = gql`
+    query MyQuery {
+      postsConnection (where: {featuredPost: true}){
+        edges {
+          cursor
+          node {
+            author {
+              bio
+              name
+              id
+              photo {
+                url
+              }
+            }
+            createdAt
+            slug
+            title
+            excerpt
+            featuredImage {
+              url
+            }
+            categories {
+              name
+              slug
+            }
+          }
+        }
+      }
+    }
+  `;
+
+  const result = await request(graphqlAPI, query);
+
+  return result.postsConnection.edges;
+};

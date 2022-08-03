@@ -1,9 +1,13 @@
-import React, { useState, useEffect } from 'react';
+
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 
+import React, { useState, useEffect } from "react";
+import moment from "moment";
+import Link from "next/link";
+
 import { FeaturedPostCard } from '../components';
-import { getFeaturedPostsTwo } from '../services';
+import { getFeaturedPosts, getCategories } from '../services';
 
 const responsive = {
   superLargeDesktop: {
@@ -24,18 +28,7 @@ const responsive = {
   },
 };
 
-const FeaturedPosts = () => {
-  const [featuredPosts, setFeaturedPosts] = useState([]);
-  const [dataLoaded, setDataLoaded] = useState(false);
-
-  useEffect(() => {
-    getFeaturedPostsTwo().then((result) => {
-      setFeaturedPosts(result);
-      setDataLoaded(true);
-    });
-  }, []);
-
-  const customLeftArrow = (
+const customLeftArrow = (
     <div className="absolute arrow-btn left-0 text-center py-3 cursor-pointer bg-pink-600 rounded-full">
       <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-white w-full" fill="none" viewBox="0 0 24 24" stroke="currentColor">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
@@ -51,9 +44,17 @@ const FeaturedPosts = () => {
     </div>
   );
 
+const FeaturedPosts = () => {
+    const [categories, setCategories] = useState([]);
+  
+    useEffect(() => {
+      getCategories().then((newCategories) => {
+        setCategories(newCategories);
+      });
+    }, []);
+
   return (
     <div className="mb-8">
-      {featuredPosts.toString()}
     </div>
   );
 };

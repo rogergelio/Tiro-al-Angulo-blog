@@ -1,6 +1,6 @@
 import { FeaturedPosts } from '../sections/index'
-import { PostCard, Categories, PostWidget } from '../components';
-import { getPosts } from '../services';
+import { PostCard, Categories, PostWidget, FeaturedPostCard } from '../components';
+import { getPosts, getPostsTwo, getFeaturedPost } from '../services';
 
 export default function Home({ posts }) {
   return (
