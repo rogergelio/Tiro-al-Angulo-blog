@@ -34,6 +34,7 @@ const CommentsForm = ({ slug }) => {
   };
 
   const handlePostSubmission = () => {
+    console.log("entró")
     setError(false);
     const { name, email, comment, storeData } = formData;
     if (!name || !email || !comment) {
@@ -56,6 +57,8 @@ const CommentsForm = ({ slug }) => {
     }
 
     submitComment(commentObj)
+    console.log("parte 2")
+    console.log(commentObj)
       .then((res) => {
         if (res.createComment) {
           if (!storeData) {
@@ -67,6 +70,8 @@ const CommentsForm = ({ slug }) => {
             ...prevState,
             ...formData,
           }));
+          console.log("parte 3")
+          console.log(formData)
           setShowSuccessMessage(true);
           setTimeout(() => {
             setShowSuccessMessage(false);
