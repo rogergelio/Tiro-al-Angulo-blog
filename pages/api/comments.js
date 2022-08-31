@@ -14,7 +14,7 @@ export default async function asynchandler(req, res) {
   console.log(process.env.GRAPHCMS_TOKEN)
   const graphQLClient = new GraphQLClient((graphqlAPI), {
     headers: {
-      authorization: `Bearer ${token}`,
+      authorization: `Bearer ${process.env.GRAPHCMS_TOKEN}`,
     },
   });
 
