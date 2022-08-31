@@ -57,10 +57,10 @@ const CommentsForm = ({ slug }) => {
     }
 
     submitComment(commentObj)
-    console.log("parte 2")
-    console.log(commentObj)
       .then((res) => {
+        console.log("entró a este if")
         if (res.createComment) {
+          console.log("comentario creado")
           if (!storeData) {
             formData.name = '';
             formData.email = '';
