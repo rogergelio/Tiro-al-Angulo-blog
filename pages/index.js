@@ -12,7 +12,7 @@ export default function Home({ posts }) {
     <div className="container mx-auto px-10 mb-8">
       <FeaturedPosts />
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-        <div className="lg:col-span-8 col-span-1 animate-in slide-in-from-left duration-700 animate-out slide-out-to-right duration-300">
+        <div className="lg:col-span-8 col-span-1 animate-in slide-in-from-left duration-700">
           {console.log(Date.now())}
           {console.log(posts)}
           {posts.map((post, index) => (
