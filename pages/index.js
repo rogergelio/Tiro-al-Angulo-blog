@@ -15,7 +15,7 @@ export default function Home({ posts }) {
           ))}
         </div>
         <div className="lg:col-span-4 col-span-1">
-          <div className="lg:sticky relative top-8">
+          <div className="lg:sticky relative top-8 animate-in spin-in animation-duration: 1500ms">
             <PostWidget />
             <Categories />
           </div>
