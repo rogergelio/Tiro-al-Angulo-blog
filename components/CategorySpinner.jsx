@@ -20,7 +20,7 @@ const CategorySpinner = () => {
               {categories.map((category, index) => (
                 <Link key={index} href={`/category/${category.slug}`}>
                   <div className="object-fill">
-                    <img src={category.picture.url} width="75" height="70"/>
+                    <img src={category.picture.url} width="100" height="100"/>
                   </div>
                 </Link>
               ))}
