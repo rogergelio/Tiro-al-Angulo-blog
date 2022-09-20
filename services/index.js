@@ -41,9 +41,12 @@ export const getPosts = async () => {
 export const getCategories = async () => {
   const query = gql`
     query GetGategories {
-      categories {
+      categories(orderBy: type_DESC) {
         name
         slug
+        picture {
+          url
+        }
       }
     }
   `;

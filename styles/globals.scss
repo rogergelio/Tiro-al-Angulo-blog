@@ -62,3 +62,23 @@ a {
 * {
   box-sizing: border-box;
 }
+  
+  .track {
+    white-space: nowrap;
+    will-change: transform;
+    animation: marquee 25s linear infinite;
+    width: 100%;
+  }
+  .track:hover {
+    animation-play-state: paused;
+  }
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+  }
+  
+  .maylike-products-container{
+    justify-content: right;
+    display: flex;
+    gap: 15px;
+  }
