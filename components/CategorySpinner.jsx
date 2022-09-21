@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { getCategories } from "../services";
-import Link from 'next/link';
-
+import Link from "next/link";
 
 const CategorySpinner = () => {
   const [categories, setCategories] = useState([]);
@@ -14,17 +13,20 @@ const CategorySpinner = () => {
 
   return (
     <>
-      <div className="border-b border-white-400 object-fit: contain;">
-            <div className="maylike-products-container track mb-4">
-              {console.log(categories)}
-              {categories.map((category, index) => (
-                <Link key={index} href={`/category/${category.slug}`}>
-                  <div className="object-fill">
-                    <img src={category.picture.url} width="100" height="100"/>
-                  </div>
-                </Link>
-              ))}
-              
+      <div className="border-b border-white-400 w-512 sm:w-512 md:w-512 lg:w-512">
+        <div className="maylike-products-container track mb-4">
+          {console.log(categories)}
+          {categories.map((category, index) => (
+            <Link key={index} href={`/category/${category.slug}`}>
+              <div className="object-fill ">
+                <img
+                  className="w-96"
+                  src={category.picture.url}
+                  alt={category.name}
+                />
+              </div>
+            </Link>
+          ))}
         </div>
       </div>
     </>

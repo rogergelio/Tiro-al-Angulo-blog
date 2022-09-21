@@ -62,12 +62,12 @@ a {
 * {
   box-sizing: border-box;
 }
-  
+
   .track {
     white-space: nowrap;
     will-change: transform;
-    animation: marquee 25s linear infinite;
-    width: 100%;
+    animation: marquee 15s linear infinite;
+    width: 120%;
   }
   .track:hover {
     animation-play-state: paused;
@@ -76,9 +76,10 @@ a {
     from { transform: translateX(0); }
     to { transform: translateX(-50%); }
   }
-  
+
+
   .maylike-products-container{
-    justify-content: right;
     display: flex;
+    justify-content: center;
     gap: 15px;
   }
