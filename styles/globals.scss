@@ -64,9 +64,11 @@ a {
 }
 
   .track {
+    
+  animation-delay: 2000ms;
     white-space: nowrap;
     will-change: transform;
-    animation: marquee 15s linear infinite;
+    animation: marquee 35s linear infinite;
     width: 120%;
   }
   .track:hover {
