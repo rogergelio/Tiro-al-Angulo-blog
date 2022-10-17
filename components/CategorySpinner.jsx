@@ -15,7 +15,6 @@ const CategorySpinner = () => {
     <>
       <div className="border-b border-white-400 w-512 sm:w-512 md:w-512 lg:w-512">
         <div className="maylike-products-container track mb-4">
-          {console.log(categories)}
           {categories.map((category, index) => (
             <Link key={index} href={`/category/${category.slug}`}>
               <div className="object-fill ">

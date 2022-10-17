@@ -34,7 +34,6 @@ const CommentsForm = ({ slug }) => {
   };
 
   const handlePostSubmission = () => {
-    console.log("entró")
     setError(false);
     const { name, email, comment, storeData } = formData;
     if (!name || !email || !comment) {
@@ -58,9 +57,7 @@ const CommentsForm = ({ slug }) => {
 
     submitComment(commentObj)
       .then((res) => {
-        console.log("entró a este if")
         if (res.createComment) {
-          console.log("comentario creado")
           if (!storeData) {
             formData.name = '';
             formData.email = '';
@@ -70,8 +67,6 @@ const CommentsForm = ({ slug }) => {
             ...prevState,
             ...formData,
           }));
-          console.log("parte 3")
-          console.log(formData)
           setShowSuccessMessage(true);
           setTimeout(() => {
             setShowSuccessMessage(false);
