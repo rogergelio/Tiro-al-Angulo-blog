@@ -45,7 +45,7 @@ body {
 
 .react-multi-carousel-list {
   & .arrow-btn{
-    transition: width 300ms ease;
+    transition: width 30000ms ease;
     width: 50px;
     &:hover{
       width: 60px;
@@ -66,10 +66,8 @@ a {
   .track {
     
   animation-delay: 2000ms;
-    white-space: nowrap;
-    will-change: transform;
-    animation: marquee 35s linear infinite;
-    width: 120%;
+    animation: marquee 55s linear infinite;
+    width: 250%;
   }
   .track:hover {
     animation-play-state: paused;
