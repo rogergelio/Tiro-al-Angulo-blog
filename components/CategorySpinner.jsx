@@ -17,9 +17,9 @@ const CategorySpinner = () => {
         <div className="maylike-products-container track mb-4">
           {categories.map((category, index) => (
             <Link key={index} href={`/category/${category.slug}`}>
-              <div className="object-fill ">
+              <div className="aaa">
                 <img
-                  className="w-96"
+                  className="item"
                   src={category.picture.url}
                   alt={category.name}
                 />
