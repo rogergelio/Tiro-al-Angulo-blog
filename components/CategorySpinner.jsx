@@ -14,13 +14,13 @@ const CategorySpinner = () => {
   return (
     <>
       <div className="border-b border-white-400 w-512 sm:w-512 md:w-512 lg:w-512">
+        <div className="overcontainer">
         <div className="maylike-products-container track mb-4">
           {categories.map((category, index) => (
             <Link key={index} href={`/category/${category.slug}`}>
-              <div className="object-fill ">
+              <div className="container">
                 <img
-                  className="w-96"
-                  height="100px"
+                  className="item"
                   src={category.picture.url}
                   alt={category.name}
                 />
@@ -29,16 +29,16 @@ const CategorySpinner = () => {
           ))}
           {categories.map((category, index) => (
             <Link key={index} href={`/category/${category.slug}`}>
-              <div className="object-fill ">
+              <div className="container">
                 <img
-                  className="w-96"
-                  height="200px"
+                  className="item"
                   src={category.picture.url}
                   alt={category.name}
                 />
               </div>
             </Link>
           ))}
+        </div>
         </div>
       </div>
     </>
