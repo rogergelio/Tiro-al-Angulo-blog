@@ -72,7 +72,6 @@ a {
     animation: 1s;
     -webkit-animation: marquee 40s linear infinite;
     -moz-animation: 10s linear infinite;
-    animation-timing-function: linear;
   }
   .track:hover {
     animation-play-state: paused;
@@ -93,5 +92,5 @@ a {
   }
   .item{
     max-width:70px;
-    min-width: 70px;
+    min-width: 30px;
   }
