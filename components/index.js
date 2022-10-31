@@ -10,3 +10,4 @@ export { default as Header } from './Header';
 export { default as FeaturedPostCrd } from './FeaturedPostCard'
 export { default as Loader } from './Loader'
 export {default as CategorySpinner} from './CategorySpinner'
+export {default as Navbar} from './Navbar'
