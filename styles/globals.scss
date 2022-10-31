@@ -64,7 +64,6 @@ a {
 }
 
   .track {
-    
   animation-delay: 2000ms;
     white-space: nowrap;
     will-change: transform;
@@ -73,6 +72,12 @@ a {
     -webkit-animation: marquee 40s linear infinite;
     -moz-animation: 10s linear infinite;
   }
+
+  @media (max-width: 767px) { 
+    .track{
+      -webkit-animation: marquee 15s linear infinite;
+    }
+}
   .track:hover {
     animation-play-state: paused;
   }
@@ -94,3 +99,21 @@ a {
     max-width:70px;
     min-width: 30px;
   }
+
+  @media (max-width: 767px) { 
+    .item{
+      max-width:40px;
+      min-width: 40px;
+    }
+}
+
+  .headerFlexbox{
+    display: flex;
+    gap: 15px;
+  }
+
+  @media (max-width: 767px) { 
+    .headerFlexbox{
+        display:none;
+    }
+}
