@@ -1,7 +1,5 @@
 import React from 'react';
 import { useRouter } from 'next/router';
-
-import { getCategories, getCategoryPost } from '../../services';
 import { Us, Loader } from '../../components';
 const Us = ({}) => {
   const router = useRouter();
