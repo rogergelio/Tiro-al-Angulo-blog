@@ -1,0 +1,1 @@
+export {default as tiroAlAngulo} from './tiroAlAngulo.jpg'
