@@ -14,7 +14,7 @@ class Us extends Component {
     this.timeout = setInterval(() => {
       let currentIdx = this.state.textIdx;
       this.setState({ textIdx: currentIdx + 1 });
-    }, 7000);
+    }, 3000);
   }
 
   componentDidUnmount() {
