@@ -32,7 +32,7 @@ class Us extends Component {
       <div className="container mx-auto px-10 mb-8">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
           <div className="lg:col-span-12 col-span-1 animate-in slide-in-from-left duration-700">
-            <div className="aboutUsContainer text-center bg-black/15 shadow-lg rounded-lg lg:p-8 pb-12 mb-8">
+            <div className="aboutUsContainer text-center bg-stone-900/20  rounded-lg lg:p-8 pb-12 mb-8">
               <h1 className="usText text-white text-5xl font-bold mb-4">
                 {textThatChanges}
               </h1>
