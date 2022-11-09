@@ -6,6 +6,7 @@ var textArray = [
   "Somos los fans.",
   "Somos los amantes del fut.",
   "Somos los aficionados.",
+  "Somos Tiro al Ángulo."
 ];
 
 class Us extends Component {
