@@ -122,7 +122,6 @@ a {
 
 nav{
   display: flex;
-  padding: 16px;
   justify-content: space-between;
   align-items: center;
 }
@@ -154,10 +153,10 @@ nav{
   right: 0;
 }
 .nav__link{
-  font-size: 18px; 
+  font-size: 24px; 
   position: relative;
   transition: all 0.2s;
-  color: white
+  color: white;
 }
 
 .nav__link:hover{
@@ -170,7 +169,7 @@ nav{
   justify-content: center;
   align-items: center;
 }
-@media screen and (min-width: 768px) {
+@media (min-width: 638px) {
   .nav__menu-bar{
     display: none;
   }
@@ -196,4 +195,6 @@ nav{
   .nav__link:hover:before{
    width: 100%;
   }
+
+  
 }

@@ -5,7 +5,7 @@ import NavItem from "./NavItem";
 
 const MENU_LIST = [
   { text: "Nosotros", href: "/nav/us" },
-  { text: "About Us", href: "/nav/results" },
+  { text: "Resultados", href: "/nav/results" },
 ];
 const Navbar = () => {
   const [navActive, setNavActive] = useState(null);
@@ -15,8 +15,8 @@ const Navbar = () => {
     <header>
       <nav className={`nav`}>
       <Link href="/">
-            <div>
-              <span className="cursor-pointer font-bold text-4xl text-white">
+            <div className="navTitle">
+              <span className="tal cursor-pointer font-bold text-2xl text-white sm:text-4xl">
                 Tiro al Ángulo
               </span>
               <h1 className="cursor-pointer font-semi text-s text-white">
