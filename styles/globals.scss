@@ -180,6 +180,7 @@ nav{
     width: fit-content;
     column-gap: 24px;
     align-items: center;
+    z-index:-1;
   }
   .nav__link::before{
     content: '';
@@ -191,10 +192,13 @@ nav{
     background-color: white;
     transition: all 0.2s;
   }
-  
+
   .nav__link:hover:before{
    width: 100%;
   }
 
+  .nav__link::active{
+    z-index:100;
+  }
   
 }
