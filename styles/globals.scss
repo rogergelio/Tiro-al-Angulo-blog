@@ -124,6 +124,7 @@ nav{
   justify-content: space-between;
   align-items: center;
 }
+
 .nav__menu-bar{
   display: flex;
   flex-direction: column;
@@ -148,9 +149,11 @@ nav{
   transition: all 0.2s;
   min-height: calc(100vh - 60px);
 }
+
 .nav__menu-list.active{
   right: 0;
 }
+
 .nav__link{
   font-size: 24px; 
   position: relative;
@@ -179,7 +182,6 @@ nav{
     width: fit-content;
     column-gap: 24px;
     align-items: center;
-    z-index:-1;
   }
   .nav__link::before{
     content: '';
@@ -188,8 +190,8 @@ nav{
     height: 6px;
     bottom: -16px;
     left: 0;
-    background-color: white;
     transition: all 0.2s;
+    background-color: white;
   }
 
   .nav__link:hover:before{

@@ -32,7 +32,7 @@ const Navbar = () => {
           <div></div>
           <div></div>
         </div>
-        <div className={`${navActive ? "active" : ""} nav__menu-list`}>
+        <div className={`${navActive ? "active" : ""} nav__menu-list rounded:lg`}>
           {MENU_LIST.map((menu, idx) => (
             <div
               onClick={() => {
