@@ -19,7 +19,7 @@ class Us extends Component {
     this.timeout = setInterval(() => {
       let currentIdx = this.state.textIdx;
       this.setState({ textIdx: currentIdx + 1 });
-    }, 5000);
+    }, 7000);
   }
 
   componentDidUnmount() {
@@ -56,7 +56,7 @@ class Us extends Component {
                 Llena de gente como ustedes. 
               </h2>
               <h2 className="text-2xl text-white bg-grey mb-6">
-                Así que comenten, expresen, y no tengan miedo de
+                Así que comenten, discutan, y no tengan miedo de
                 expresar sus opiniones pamboleras sobre este increíble deporte,
                 que para eso estamos. 
               </h2>
