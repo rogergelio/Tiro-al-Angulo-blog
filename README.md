@@ -9,3 +9,4 @@ Add Tags to article headers
 Change date Location
 Add search bar
 Add social networks
+Add Authors page
