@@ -94,11 +94,12 @@ export const getSimilarPosts = async (categories, slug) => {
   const query = gql`
     query GetPostDetails($slug: String!, $categories: [String!]) {
       posts(
+        orderBy: updatedAt_DESC
         where: {
           slug_not: $slug
           AND: { categories_some: { slug_in: $categories } }
         }
-        last: 6
+        first: 6
       ) {
         title
         featuredImage {
