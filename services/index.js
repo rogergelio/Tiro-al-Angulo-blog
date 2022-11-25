@@ -119,7 +119,7 @@ export const getAdjacentPosts = async (createdAt, slug) => {
     query GetAdjacentPosts($createdAt: DateTime!, $slug: String!) {
       next: posts(
         first: 1
-        orderBy: createdAt_ASC
+        orderBy: createdAt_DESC
         where: { slug_not: $slug, AND: { createdAt_gte: $createdAt } }
       ) {
         title
@@ -152,7 +152,7 @@ export const getAdjacentPosts = async (createdAt, slug) => {
 export const getCategoryPost = async (slug) => {
   const query = gql`
     query GetCategoryPost($slug: String!) {
-      postsConnection(where: { categories_some: { slug: $slug } }) {
+      postsConnection(where: { categories_some: { slug: $slug } } orderBy: publishedAt_DESC) {
         edges {
           cursor
           node {
@@ -262,8 +262,8 @@ export const getRecentPosts = async () => {
   const query = gql`
     query GetPostDetails() {
       posts(
-        orderBy: createdAt_ASC
-        last: 6
+        orderBy: createdAt_DESC
+        first: 6
       ) {
         title
         featuredImage {

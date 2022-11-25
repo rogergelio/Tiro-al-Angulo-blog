@@ -5,6 +5,7 @@ import NavItem from "./NavItem";
 const MENU_LIST = [
   { text: "Nosotros", href: "/nav/us" },
   { text: "Resultados", href: "/nav/results" },
+  { text: "Autores", href: "nav/authors"},
 ];
 const Navbar = () => {
   const [navActive, setNavActive] = useState(null);
