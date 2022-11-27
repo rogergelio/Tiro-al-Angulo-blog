@@ -11,3 +11,4 @@ Add search bar
 Add social networks
 Add Authors page
 Fix imports
+Optimize images
