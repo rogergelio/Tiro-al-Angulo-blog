@@ -12,8 +12,7 @@ export default function Home({ posts }) {
     <div className="container mx-auto px-10 mb-8">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-4">
         <div className="lg:col-span-12 col-span-1 animate-in slide-in-from-left duration-700 object-fit: contain;">
-          {//<CategorySpinner />
-}
+          <CategorySpinner />
         </div>
         <div className="lg:col-span-8 col-span-1 animate-in slide-in-from-left duration-700">
           {posts.map((post, index) => (
