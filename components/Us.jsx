@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-import Image from "next/image";
-import fab from "../public/fab4.jpeg";
 
 var textArray = [
   "Somos los fans.",

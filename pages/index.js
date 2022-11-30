@@ -1,11 +1,9 @@
-import { FeaturedPosts } from "../sections/index";
 import {
   PostCard,
-  Categories,
   PostWidget,
   CategorySpinner,
 } from "../components";
-import { getPosts, getPostsTwo, getFeaturedPost } from "../services";
+import { getPosts} from "../services";
 
 export default function Home({ posts }) {
   return (
