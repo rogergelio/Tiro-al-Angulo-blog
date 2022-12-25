@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { getCategories } from "../services";
 import Link from "next/link";
+import Image from "next/image"
 
 const CategorySpinner = () => {
   const [categories, setCategories] = useState([]);
