@@ -11,5 +11,5 @@ Add search bar
 Add social networks
 Add Authors page
 Fix imports
-Optimize images (all)
+Optimize images(all)
 Get reference model por academic articles
