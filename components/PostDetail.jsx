@@ -1,5 +1,5 @@
 import React from 'react';
-
+import Image from "next/image"
 import moment from 'moment';
 
 const PostDetail = ({ post }) => {
@@ -51,7 +51,7 @@ const PostDetail = ({ post }) => {
         <div className="px-4 lg:px-0">
           <div className="flex items-center mb-8 w-full">
             <div className="hidden md:flex items-center justify-center lg:mb-0 lg:w-auto mr-8 items-center">
-              <img
+              <Image
                 alt={post.author.name}
                 height="30px"
                 width="30px"
