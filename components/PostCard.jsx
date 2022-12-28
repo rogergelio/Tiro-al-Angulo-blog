@@ -23,7 +23,7 @@ const PostCard = ({ post }) => {
         <Link href={`/post/${post.slug}`}>{post.title}</Link>
       </h1>
       <div className="block lg:flex text-center items-center justify-center mb-2 w-full">
-        <div className="flex items-center justify-center mb-4 lg:mb-0 w-full lg:wauto mr-8">
+        <div className="flex items-center justify-center mb-2 lg:mb-0 w-full lg:wauto mr-8">
           <Image
             alt={post.author.name}
             height="30px"
@@ -37,10 +37,10 @@ const PostCard = ({ post }) => {
         </div>
         
       </div>
-      <div className="font-medium text-gray-700 text-center justify-center mb-4 w-full">
+      <div className="font-medium text-gray-700 text-center justify-center mb-2 w-full">
           <span>{moment(post.createdAt).format("DD, MM, YYYY")}</span>
       </div>
-      <p className="text-center text-lg text-gray-700 font-normal px-4 lg:px-20 mb-8">
+      <p className="text-center text-lg text-gray-700 font-normal px-4 lg:px-20 mb-4">
         {post.excerpt}
       </p>
       <div className="text-center">
