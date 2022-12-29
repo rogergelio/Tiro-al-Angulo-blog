@@ -210,3 +210,23 @@ nav{
     font-size: 36px; 
   }
 }
+
+//Authors
+.image-track {
+  display: flex;
+  flex-direction: row;
+  gap: 4vmin;
+  left: 10%;
+  top: 50%;
+  transform: translate(1.8%, 10%); 
+  user-select: none; /* -- Prevent image highlighting -- */
+  overflow-y: scroll;
+}
+
+.image-track > .image {
+  width: 40vmin;
+  height: 60vmin;
+  object-fit: cover;
+  object-position: 100% center;
+}
+
