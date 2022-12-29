@@ -1,12 +1,13 @@
 import Link from "next/link";
 import React, { useState } from "react";
 import NavItem from "./NavItem";
-import { SiTiktok, SiInstagram, SiTwitter } from "react-icons/si";
+import { SiTiktok, SiInstagram, SiTwitter, SiSpotify} from "react-icons/si";
 
 const MENU_LIST = [
-  { text: <SiTiktok/>, href: "nav/authors" },
-  { text: <SiTwitter/>, href: "nav/authors" },
-  { text: <SiInstagram/>, href: "nav/authors" },
+  { text: <SiTiktok/>, href: "https://www.tiktok.com/@tiroalangulo7" },
+  { text: <SiSpotify/>, href: "https://open.spotify.com/show/2d1wx74ZuP3F3elNOtOFIu" },
+  { text: <SiTwitter/>, href: "https://twitter.com/angulo_tiro" },
+  { text: <SiInstagram/>, href: "https://www.instagram.com/tiroalangulo7/?hl=en" },
   { text: "Nosotros", href: "/nav/us" },
   { text: "Resultados", href: "/nav/results" },
   { text: "Autores", href: "nav/authors" },
