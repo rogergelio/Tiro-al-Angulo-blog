@@ -148,6 +148,7 @@ nav {
   height: 4px;
   background-color: white;
   border-radius: 2px;
+  z-index: 100;
 }
 
 .nav__menu-list {
@@ -161,7 +162,7 @@ nav {
   padding: 24px;
   transition: all 0.2s;
   min-height: calc(100vh);
-  z-index: 100;
+  z-index: 10;
 }
 
 .nav__menu-list.active {

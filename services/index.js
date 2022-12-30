@@ -7,6 +7,7 @@ export const getAuthors = async () => {
     authors {
       id
       name
+      slug
       photo {
         url
       }
