@@ -2,6 +2,7 @@ import React from "react";
 import { useRouter } from "next/router";
 import { Loader } from "../../components";
 import { getAuthors } from "../../services";
+import Link from 'next/link';
 
 const Authors = ({ authors }) => {
   console.log();
@@ -13,6 +14,7 @@ const Authors = ({ authors }) => {
   return (
     <div className="image-track">
       {authors.map((author, index) => (
+        <Link key={index} href={`/author/${author.slug}`}>
         <div className="author-image">
           <img
             className="author-pic"
@@ -24,6 +26,7 @@ const Authors = ({ authors }) => {
             <div className="author-image-bio">{author.bio}</div>
           </div>
         </div>
+        </Link>
       ))}
     </div>
   );

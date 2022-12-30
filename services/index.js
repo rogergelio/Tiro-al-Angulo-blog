@@ -332,3 +332,40 @@ export const getPostsTwo = async () => {
 
   return result.postsConnection.edges;
 };
+
+export const getAuthorPost = async (slug) => {
+  const query = gql`
+    query GetAuthorPost($slug: String!) {
+      postsConnection( where: { author: { slug: $slug }} orderBy: publishedAt_DESC) {
+        edges {
+          cursor
+          node {
+            author {
+              bio
+              name
+              id
+              photo {
+                url
+              }
+            }
+            createdAt
+            slug
+            title
+            excerpt
+            featuredImage {
+              url
+            }
+            categories {
+              name
+              slug
+            }
+          }
+        }
+      }
+    }
+  `;
+
+  const result = await request(graphqlAPI, query, { slug });
+
+  return result.postsConnection.edges;
+};
