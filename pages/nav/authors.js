@@ -11,14 +11,18 @@ const Authors = ({ authors }) => {
   }
 
   return (
-      <div className="image-track">
-        {authors.map((author, index) => (
-          <div className="author-image">
-            <div className="author-image-text">{author.name}</div>
-            <img className="author-pic" alt={author.name} src={author.photo.url}/>
-          </div>
-        ))}
-      </div>
+    <div className="image-track">
+      {authors.map((author, index) => (
+        <div className="author-image">
+          <div className="author-image-text">{author.name}</div>
+          <img
+            className="author-pic"
+            alt={author.name}
+            src={author.photo.url}
+          />
+        </div>
+      ))}
+    </div>
   );
 };
 export default Authors;
