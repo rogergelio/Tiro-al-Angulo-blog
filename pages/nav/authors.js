@@ -14,12 +14,15 @@ const Authors = ({ authors }) => {
     <div className="image-track">
       {authors.map((author, index) => (
         <div className="author-image">
-          <div className="author-image-text">{author.name}</div>
           <img
             className="author-pic"
             alt={author.name}
             src={author.photo.url}
           />
+          <div className="author-text-container">
+            <div className="author-image-text">{author.name}</div>
+            <div className="author-image-bio">{author.bio}</div>
+          </div>
         </div>
       ))}
     </div>

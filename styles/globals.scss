@@ -252,28 +252,91 @@ nav {
   max-height: 70vh;
   object-fit: cover;
   object-position: 100% left;
+  -webkit-filter: brightness(80%);
+}
+
+.author-text-container {
+  position: relative;
+  bottom: 45vh;
 }
 
 .author-image-text {
-  display:inline;
   position: relative;
   z-index: 1;
-  color:white;
-  text-align: center;
-  top:35vh;
-  left:15vh;
+  color: white;
   text-align: center;
   letter-spacing: 4px;
   text-decoration-style: solid;
-  font-size:x-large
+  font-size: x-large;
+  margin-bottom: 8px;
 }
 
-.author-pic:hover{
+.author-image-bio {
+  position: relative;
+  z-index: 1;
+  color: white;
+  text-align: center;
+  letter-spacing: 4px;
+  font-size: large
+}
+
+.author-pic:hover {
   -webkit-filter: brightness(20%);
-    -webkit-transition: all 1s ease;
-    -moz-transition: all 1s ease;
-    -o-transition: all 1s ease;
-    -ms-transition: all 1s ease;
-    transition: all .75s ease;
-    cursor:pointer;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+  transition: all .75s ease;
+  cursor: pointer;
+}
+
+@media (max-width: 638px) {
+  .image-track {
+    flex-direction: column;
+  }
+
+  .author-image {
+    position: relative;
+    min-width: 0vw;
+    min-height: 0vw;
+    max-height:90vw;
+    display:inline;
+    overflow-y:hidden;
+  }
+
+  .author-pic {
+    max-height: 90vw;
+    object-fit: cover;
+    object-position: 100% left;
+    -webkit-filter: brightness(40%);
+    position: relative; 
+    left:5vw;
+  }
+
+  .author-text-container {
+    position: relative;
+    bottom: 30vh;
+    left:7.5vw;
+    max-width: 85vw;
+  }
+
+  .author-image-text {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    letter-spacing: 4px;
+    text-decoration-style: solid;
+    font-size: x-large;
+    margin-bottom: 8px;
+  }
+
+  .author-image-bio {
+    position: relative;
+    z-index: 1;
+    color: white;
+    text-align: center;
+    letter-spacing: 4px;
+    font-size: large
+  }
 }
