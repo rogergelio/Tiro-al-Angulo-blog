@@ -29,6 +29,7 @@ const Authors = ({ authors }) => {
         </Link>
       ))}
     </div>
+    
   );
 };
 export default Authors;

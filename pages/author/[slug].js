@@ -2,7 +2,7 @@ import React from 'react';
 import { useRouter } from 'next/router';
 
 import { getAuthors, getAuthorPost } from '../../services';
-import { PostCard, Categories, Loader } from '../../components';
+import { PostCard, PostWidget, Loader } from '../../components';
 
 const AuthorPost = ({ posts }) => {
   const router = useRouter();
@@ -18,6 +18,11 @@ const AuthorPost = ({ posts }) => {
           {posts.map((post, index) => (
             <PostCard key={index} post={post.node} />
           ))}
+        </div>
+        <div className="lg:col-span-4 col-span-1">
+          <div className="lg:sticky relative top-6 animate-in spin-in zoom-in duration-700">
+            <PostWidget />
+          </div>
         </div>
       </div>
     </div>
