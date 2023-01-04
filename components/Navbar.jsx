@@ -9,7 +9,7 @@ const MENU_LIST = [
   { text: <SiTwitter/>, href: "https://twitter.com/angulo_tiro" },
   { text: <SiInstagram/>, href: "https://www.instagram.com/tiroalangulo7/?hl=en" },
   { text: "Nosotros", href: "/nav/us" },
-  { text: "Resultados", href: "/nav/results" },
+  //{ text: "Resultados", href: "/nav/results" },
   { text: "Autores", href: "nav/authors" },
   
 ];
