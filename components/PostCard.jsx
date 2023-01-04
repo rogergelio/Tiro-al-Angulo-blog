@@ -11,7 +11,7 @@ const PostCard = ({ post }) => {
           src={post.featuredImage.url}
           alt={post.title}
           className="object-top absolute w-full object-cover shadow-lg rounded-t-lg lg:rounded-lg"
-          width="788px"
+          width="1000px"
           height="320px"
         />
       </div>
