@@ -8,7 +8,7 @@ const MENU_LIST = [
   { text: <SiSpotify/>, href: "https://open.spotify.com/show/2d1wx74ZuP3F3elNOtOFIu" },
   { text: <SiTwitter/>, href: "https://twitter.com/angulo_tiro" },
   { text: <SiInstagram/>, href: "https://www.instagram.com/tiroalangulo7/?hl=en" },
-  { text: "Nosotros", href: "/nav/us" },
+  { text: "Nosotros", href: "nav/us" },
   //{ text: "Resultados", href: "/nav/results" },
   { text: "Autores", href: "nav/authors" },
   

@@ -248,10 +248,12 @@ nav {
 .author-image {
   min-width: 70vh;
   min-height: 70vh;
+  
 }
 
 .author-pic {
   max-height: 70vh;
+  min-width: 70vh;
   object-fit: cover;
   object-position: 100% left;
   -webkit-filter: brightness(80%);

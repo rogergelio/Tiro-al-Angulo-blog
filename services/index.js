@@ -281,6 +281,7 @@ export const getRecentPosts = async () => {
       posts(
         orderBy: createdAt_DESC
         first: 6
+        where: {featuredPost: true}
       ) {
         title
         featuredImage {
