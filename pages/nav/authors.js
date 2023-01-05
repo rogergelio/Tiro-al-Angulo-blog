@@ -12,10 +12,10 @@ const Authors = ({ authors }) => {
   }
 
   return (
-    <div className="image-track">
+    <div className="image-track mt-8 snap-x">
       {authors.map((author, index) => (
         <Link key={index} href={`/author/${author.slug}`}>
-        <div className="author-image">
+        <div className="author-image snap-center">
           <img
             className="author-pic"
             alt={author.name}

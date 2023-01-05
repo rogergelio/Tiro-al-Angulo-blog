@@ -6,18 +6,18 @@ import Image from "next/image";
 const PostCard = ({ post }) => {
   return (
     <Link href={`/post/${post.slug}`}>
-      <div className="bg-theme-black shadow-lg pb-8 mb-8 text-neutral-200 p-0 lg:p-2 cursor-pointer ml-1 h-45v group">
+      <div className="snap-center bg-theme-black shadow-lg pb-8 mb-4 text-neutral-200 p-0 lg:p-2 cursor-pointer ml-1 h-45v group">
         <div
           style={{
             backgroundImage: `url(${post.featuredImage.url})`,
           }}
           className="w-2/5 h-full bg-center bg-cover duration-200 brightness-90 z-10"
         ></div>
-        <div className="group hover:text-dark-green transition duration-400 relative">
+        <div className="group relative">
           <div className="absolute right-0 -top-40v w-3/5 inset-y-0">
             <div className="h-full relative">
               <div className="h-full grid">
-              <h1 className=" text-center mb-2 text-2xl font-semibold px-2 max-h-20v overflow-hidden">
+              <h1 className="hover:text-dark-green transition duration-400 text-center mb-2 text-2xl font-semibold px-2 max-h-20v overflow-hidden">
                 {post.title}
               </h1>
               <p className="text-center text-s font-normal px-2 mb-6 overflow-hidden text-clip inset-x-0 max-h-20v">
