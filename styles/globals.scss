@@ -171,16 +171,14 @@ nav {
 }
 
 .nav__link {
-  font-size: 24px;
+  font-size: 30px;
   position: relative;
   transition: all 0.2s;
   color: white;
 }
-
 .nav__link:hover {
-  font-weight: bold;
+  color: green;
 }
-
 .center {
   min-height: 600px;
   display: flex;
@@ -210,11 +208,11 @@ nav {
     bottom: -16px;
     left: 0;
     transition: all 0.2s;
-    background-color: white;
   }
 
   .nav__link:hover:before {
     width: 100%;
+    background-color: darkgreen;
   }
 
 

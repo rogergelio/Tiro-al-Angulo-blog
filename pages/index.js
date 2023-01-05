@@ -1,18 +1,21 @@
-import {
-  PostCard,
-  PostWidget,
-  CategorySpinner,
-} from "../components";
-import { getPosts} from "../services";
+import { PostCard, PostWidget, CategorySpinner, WelcomeCard } from "../components";
+import { getPosts } from "../services";
+import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
+import React, { useState } from "react";
+import { RxDotFilled } from "react-icons/rx";
+import Link from "next/link";
+import Image from "next/image";
 
 export default function Home({ posts }) {
   return (
-    <div className="container mx-auto px-4 mb-8">
+    <div className="container mx-auto mb-8">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-4">
-        {//<div className="lg:col-span-12 col-span-1 animate-in slide-in-from-left duration-700 object-fit: contain;"-->}
+        {
+          //<div className="lg:col-span-12 col-span-1 animate-in slide-in-from-left duration-700 object-fit: contain;"-->}
           //<CategorySpinner />
-        //</div>
-      }
+          //</div>
+        }
+        <WelcomeCard posts={posts}/>
         <div className="lg:col-span-8 col-span-1 animate-in slide-in-from-left duration-700">
           {posts.map((post, index) => (
             <PostCard key={index} post={post.node} />

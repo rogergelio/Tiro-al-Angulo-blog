@@ -8,9 +8,9 @@ const MENU_LIST = [
   { text: <SiSpotify/>, href: "https://open.spotify.com/show/2d1wx74ZuP3F3elNOtOFIu" },
   { text: <SiTwitter/>, href: "https://twitter.com/angulo_tiro" },
   { text: <SiInstagram/>, href: "https://www.instagram.com/tiroalangulo7/?hl=en" },
-  { text: "Nosotros", href: "nav/us" },
+  { text: "Nosotros", href: "/nav/us" },
   //{ text: "Resultados", href: "/nav/results" },
-  { text: "Autores", href: "nav/authors" },
+  { text: "Autores", href: "/nav/authors" },
   
 ];
 const Navbar = () => {
@@ -21,11 +21,11 @@ const Navbar = () => {
     <header>
       <nav className={`nav`}>
         <Link href="/">
-          <div className="navTitle">
-            <span className="tal cursor-pointer font-bold text-2xl text-white sm:text-4xl">
+          <div className="navTitle ml-2 text-white hover:text-dark-green ">
+            <span className="tal cursor-pointer font-bold text-2xl sm:text-4xl ">
               Tiro al Ángulo
             </span>
-            <h1 className="cursor-pointer font-semi text-s text-white">
+            <h1 className="cursor-pointer font-semi text-s">
               El blog 100% pambolero
             </h1>
           </div>
