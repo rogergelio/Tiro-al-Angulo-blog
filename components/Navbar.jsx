@@ -21,7 +21,7 @@ const Navbar = () => {
     <header>
       <nav className={`nav`}>
         <Link href="/">
-          <div className="navTitle ml-2 text-white hover:text-dark-green ">
+          <div className="navTitle ml-2 text-neutral-200 hover:text-dark-green ">
             <span className="tal cursor-pointer font-bold text-2xl sm:text-4xl ">
               Tiro al Ángulo
             </span>

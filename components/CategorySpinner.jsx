@@ -14,7 +14,7 @@ const CategorySpinner = () => {
 
   return (
     <>
-      <div className="border-b border-white-400 w-512 sm:w-512 md:w-512 lg:w-512">
+      <div className="border-b border-neutral-200-400 w-512 sm:w-512 md:w-512 lg:w-512">
         <div className="overcontainer">
         <div className="maylike-products-container track mb-4">
           {categories.map((category, index) => (

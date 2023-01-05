@@ -1,56 +1,48 @@
 import React from "react";
 import moment from "moment";
 import Link from "next/link";
-import Image from "next/image"
+import Image from "next/image";
 
 const PostCard = ({ post }) => {
   return (
-    <div className="bg-white shadow-lg rounded-lg p-0 lg:p-8 pb-12 mb-8">
-      <div className="relative overflow-hidden mb-4">
-        <Image
-          src={post.featuredImage.url}
-          alt={post.title}
-          className="object-top absolute w-full object-cover shadow-lg rounded-t-lg lg:rounded-lg"
-          width="1000px"
-          height="320px"
-        />
-      </div>
-      <h1
-        className="transition duration-700 text-center mb-8 cursor:pointer
-      hover:text-green-600 text-3xl font-semibold
-      "
-      >
-        <Link href={`/post/${post.slug}`}>{post.title}</Link>
-      </h1>
-      <div className="block lg:flex text-center items-center justify-center mb-2 w-full">
-        <div className="flex items-center justify-center mb-2 lg:mb-0 w-full lg:wauto mr-8">
-          <Image
-            alt={post.author.name}
-            height="30px"
-            width="30px"
-            className="align-middle rounded-full"
-            src={post.author.photo.url}
-          />
-          <p className="inline align-middle text-grey-700 ml-2 text-lg">
-            {post.author.name}
-          </p>
+    <Link href={`/post/${post.slug}`}>
+      <div className="bg-theme-black shadow-lg pb-8 mb-8 text-neutral-200 p-0 lg:p-2 cursor-pointer ml-1 h-45v group">
+        <div
+          style={{
+            backgroundImage: `url(${post.featuredImage.url})`,
+          }}
+          className="w-2/5 h-full bg-center bg-cover duration-200 brightness-90 z-10"
+        ></div>
+        <div className="group hover:text-dark-green transition duration-400 relative">
+          <div className="absolute right-0 -top-40v w-3/5 inset-y-0">
+            <div className="h-full relative">
+              <div className="h-full grid">
+              <h1 className=" text-center mb-2 text-2xl font-semibold px-2 max-h-20v overflow-hidden">
+                {post.title}
+              </h1>
+              <p className="text-center text-s font-normal px-2 mb-6 overflow-hidden text-clip inset-x-0 max-h-20v">
+                {post.excerpt}
+              </p>
+              <div className="lg:flex text-left items-center justify-left w-full ">
+                <div className="flex items-center justify-center mb-2 lg:mb-0 w-full lg:wauto mr-8">
+                  <Image
+                    alt={post.author.name}
+                    height="30px"
+                    width="30px"
+                    className="align-middle rounded-full"
+                    src={post.author.photo.url}
+                  />
+                  <p className="inline align-middle text-neutral-200 ml-2 text-lg">
+                    {post.author.name}
+                  </p>
+                </div>
+              </div>
+              </div>
+            </div>
+          </div>
         </div>
-        
       </div>
-      <div className="font-medium text-gray-700 text-center justify-center mb-2 w-full">
-          <span>{moment(post.createdAt).format("DD, MM, YYYY")}</span>
-      </div>
-      <p className="text-center text-lg text-gray-700 font-normal px-4 lg:px-20 mb-4">
-        {post.excerpt}
-      </p>
-      <div className="text-center">
-        <Link href={`/post/${post.slug}`}>
-          <span className="transition duration-500 transform hover:-translate-y-1 inline-block bg-green-600 text-lg font-medium rounded-full text-white px-8 py-3 cursor-pointer">
-            Seguir leyendo
-          </span>
-        </Link>
-      </div>
-    </div>
+    </Link>
   );
 };
 

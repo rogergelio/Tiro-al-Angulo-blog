@@ -76,7 +76,7 @@ const CommentsForm = ({ slug }) => {
   };
 
   return (
-    <div className="bg-white shadow-lg rounded-lg p-8 pb-12 mb-8">
+    <div className="bg-neutral-200 shadow-lg rounded-lg p-8 pb-12 mb-8">
       <h3 className="text-xl mb-8 font-semibold border-b pb-4">¡Déjanos tus comentarios!</h3>
       <div className="grid grid-cols-1 gap-4 mb-4">
         <textarea value={formData.comment} onChange={onInputChange} className="p-4 outline-none w-full rounded-lg h-40 focus:ring-2 focus:ring-gray-200 bg-gray-100 text-gray-700" name="comment" placeholder="Comentario" />
@@ -93,8 +93,8 @@ const CommentsForm = ({ slug }) => {
       </div>
       {error && <p className="text-xs text-red-500">¡Por favor llena todos los campos!</p>}
       <div className="mt-8">
-        <button type="button" onClick={handlePostSubmission} className="transition duration-500 ease hover:bg-indigo-900 inline-block bg-green-600 text-lg font-medium rounded-full text-white px-8 py-3 cursor-pointer">Publicar Comentario</button>
-        {showSuccessMessage && <span className="text-l float-right font-semibold mt-3 text-green-500">Comentario en espera para revisión</span>}
+        <button type="button" onClick={handlePostSubmission} className="transition duration-500 ease hover:bg-indigo-900 inline-block bg-dark-green-600 text-lg font-medium rounded-full text-neutral-200 px-8 py-3 cursor-pointer">Publicar Comentario</button>
+        {showSuccessMessage && <span className="text-l float-right font-semibold mt-3 text-dark-green-500">Comentario en espera para revisión</span>}
       </div>
     </div>
   );
