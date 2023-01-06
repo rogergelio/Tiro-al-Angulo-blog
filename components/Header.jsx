@@ -12,7 +12,7 @@ const Header = () => {
   }, []);
 
   return (
-    <div className="container mx-auto px-2 max-h-15v bg-neutral-900 mb-2">
+    <div className="container mx-auto px-2 max-h-15v bg-neutral-900">
       <div className="w-full inline-block ">
         <Navbar/>
       </div>
