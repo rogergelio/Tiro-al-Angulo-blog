@@ -26,6 +26,10 @@ body {
   }
 }
 
+body::-webkit-scrollbar{
+  display: none;
+}
+
 .text-shadow {
   text-shadow: 0px 2px 0px rgb(0 0 0 / 30%);
 }
@@ -135,6 +139,7 @@ nav {
   justify-content: space-between;
   align-items: center;
   position:sticky;
+  z-index:100;
 }
 
 .nav__menu-bar {
@@ -157,12 +162,12 @@ nav {
   flex-direction: column;
   position: fixed;
   top: 0px;
-  width: calc(100vw);
+  width: calc(105vw);
   row-gap: 24px;
   right: -288*2px;
   padding: 24px;
   transition: all 0.2s;
-  min-height: calc(100vh);
+  min-height: calc(105vh);
   z-index: 10;
 }
 
