@@ -23,18 +23,19 @@ export default function WelcomeCard({ posts }) {
   };
 
   return (
+   
         <div className="lg:h-85v h-100vw w-full m-auto relative lg:col-span-12 col-span-1 group ">
-          <div
+           <Link  href={`/post/${posts[currentIndex].node.slug}`}><div
             style={{
               backgroundImage: `url(${posts[currentIndex].node.featuredImage.url})`,
             }}
-            className="w-full h-full bg-center bg-cover duration-200 brightness-25"
-          ></div>
+            className="w-full h-full bg-center bg-cover duration-200 brightness-25 cursor-pointer"
+          ></div></Link>
           {console.log(posts[0].node.featuredImage.url)}
-          <div className="lg:hidden group-hover:block text-neutral-200 absolute lg:top-[35%] top-[65%] -translate-x-0 translate-y-[50%] left-2 text-2xl p-2 cursor-pointer z-10">
+          <div className="lg:hidden group-hover:block text-neutral-200 absolute lg:top-[35%] top-[65%] -translate-x-0 translate-y-[50%] left-2 text-2xl p-2 cursor-pointer z-50">
             <BsChevronCompactLeft onClick={prevSlide} size={"60px"} />
           </div>
-          <div className="lg:hidden group-hover:block text-neutral-200 absolute lg:top-[35%] top-[65%] -translate-x-0 translate-y-[50%] right-2 text-2xl p-2 cursor-pointer z-10">
+          <div className="lg:hidden group-hover:block text-neutral-200 absolute lg:top-[35%] top-[65%] -translate-x-0 translate-y-[50%] right-2 text-2xl p-2 cursor-pointer z-50">
             <BsChevronCompactRight onClick={nextSlide} size={"60px"} />
           </div>
           <div className="relative flex lg:top-4 top-10 justify-center py-2">
@@ -52,7 +53,8 @@ export default function WelcomeCard({ posts }) {
               </div>
             ))}
           </div>
-          <div className="text-center lg:-translate-y-35v -translate-y-17v">
+          <Link  href={`/post/${posts[currentIndex].node.slug}`}>
+          <div className="text-center lg:-translate-y-35v -translate-y-17v cursor-pointer">
             <div className="text-neutral-200 text-l mx-32 my-4">
               <div className="flex items-center justify-center mb-2 lg:mb-0 w-full lg:wauto mr-8">
                 <Image
@@ -68,16 +70,18 @@ export default function WelcomeCard({ posts }) {
               </div>
               {console.log(posts[currentIndex].node.author.name)}
             </div>
-          </div>
-          <div className="text-center neutral-200 space-normal absolute lg:inset-y-1/4 inset-y-1/8 inset-x-0">
+          </div></Link>
+          <Link  href={`/post/${posts[currentIndex].node.slug}`}>
+          <div className="text-center neutral-200 space-normal absolute lg:inset-y-1/4 inset-y-1/8 inset-x-0 cursor-pointer">
             <div className="text-neutral-200 lg:text-4xl text-2xl font-bold lg:mx-32 my-4">
               {posts[currentIndex].node.title}
             </div>
             <div className="text-neutral-200 lg:text-xl text-s lg:mx-32">
               {posts[currentIndex].node.excerpt}
             </div>
-          </div>
+          </div></Link>
         </div>
+        
   );
 }
 

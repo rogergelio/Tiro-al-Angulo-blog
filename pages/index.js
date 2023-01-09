@@ -1,12 +1,12 @@
 import { PostCard, PostWidget, CategorySpinner, WelcomeCard } from "../components";
-import { getPosts } from "../services";
+import { getPosts, getRecentFeaturedPosts } from "../services";
 import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
 import React, { useState } from "react";
 import { RxDotFilled } from "react-icons/rx";
 import Link from "next/link";
 import Image from "next/image";
 
-export default function Home({ posts }) {
+export default function Home({ posts, recentFeaturedPosts }) {
   return (
     <div className="container mx-auto mb-8">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-2">
@@ -15,7 +15,7 @@ export default function Home({ posts }) {
           //<CategorySpinner />
           //</div>
         }
-        <WelcomeCard className="snap-y" posts={posts}/>
+        <WelcomeCard className="snap-y" posts={recentFeaturedPosts}/>
         <div className="lg:col-span-8 col-span-1 lg:col-start-1 animate-in slide-in-from-left duration-700">
           {posts.map((post, index) => (
             <PostCard key={index} post={post.node} />
@@ -33,9 +33,11 @@ export default function Home({ posts }) {
 }
 
 // Fetch data at build time
-export async function getStaticProps() {
+export async function getStaticProps() {const recentFeaturedPosts = (await getRecentFeaturedPosts()) || [];
   const posts = (await getPosts()) || [];
+  
   return {
-    props: { posts },
+    props: { recentFeaturedPosts, posts},
   };
 }
+

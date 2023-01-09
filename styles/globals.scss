@@ -305,18 +305,17 @@ nav {
     position: relative;
     min-width: 0vw;
     min-height: 0vw;
-    max-height:110vw;
+    max-height:120vw;
     display:inline;
     overflow-y:hidden;
   }
 
   .author-pic {
-    max-height: 110vw;
+    max-height: 120vw;
     object-fit: cover;
     object-position: 100% left;
     -webkit-filter: brightness(40%);
     position: relative; 
-    left:5vw;
   }
 
   .author-text-container {
