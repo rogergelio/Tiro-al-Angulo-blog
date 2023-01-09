@@ -5,7 +5,7 @@ const Layout = ({ children }) => {
   return (
     
     <>
-    <div className="w-110vw lg:w-100vw">
+    <div className="w-120vw lg:w-100vw">
       <Header>
       </Header>
       {children}</div>
