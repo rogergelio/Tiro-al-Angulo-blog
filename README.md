@@ -13,3 +13,4 @@ Add Authors page
 Fix imports
 Optimize images(all)
 Get reference model por academic articles
+add links to author text page
