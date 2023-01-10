@@ -25,7 +25,7 @@ const Navbar = () => {
             <span className="tal cursor-pointer font-bold text-2xl sm:text-4xl ">
               Tiro al Ángulo
             </span>
-            <h1 className="cursor-pointer font-semi text-s">
+            <h1 className="cursor-pointer font-semi text-s mb-1">
               El blog 100% pambolero
             </h1>
           </div>
