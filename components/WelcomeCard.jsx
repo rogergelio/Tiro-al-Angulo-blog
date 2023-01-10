@@ -31,7 +31,6 @@ export default function WelcomeCard({ posts }) {
             }}
             className="w-full h-full bg-center bg-cover duration-200 brightness-25 cursor-pointer"
           ></div></Link>
-          {console.log(posts[0].node.featuredImage.url)}
           <div className="lg:hidden group-hover:block text-neutral-200 absolute lg:top-[35%] top-[65%] -translate-x-0 translate-y-[50%] left-2 text-2xl p-2 cursor-pointer z-50">
             <BsChevronCompactLeft onClick={prevSlide} size={"60px"} />
           </div>
