@@ -53,7 +53,7 @@ export default function WelcomeCard({ posts }) {
             ))}
           </div>
           <Link  href={`/post/${posts[currentIndex].node.slug}`}>
-          <div className="text-center lg:-translate-y-35v -translate-y-17v cursor-pointer">
+          <div className="text-center lg:-translate-y-35v -translate-y-25v cursor-pointer">
             <div className="text-neutral-200 text-l mx-32 my-4">
               <div className="flex items-center justify-center mb-2 lg:mb-0 w-full lg:wauto mr-8">
                 <Image
