@@ -44,11 +44,11 @@ const PostDetail = ({ post }) => {
 
   return (
     <>
-      <div className="bg-theme-black shadow-lg lg:p-2 pb-12 text-neutral-200">
+      <div className="bg-theme-black shadow-lg lg:p-2 pb-12 text-neutral-200 text-justify ">
         <div className="relative overflow-hidden shadow-md mb-6 max-h-50v">
           <img src={post.featuredImage.url} alt="" className="object-top h-full w-full object-cover shadow-lg" />
         </div>
-        <div className="px-4 lg:px-0">
+        <div className="px-4 ">
           <div className="flex items-center mb-8 w-full">
             <div className="hidden md:flex items-center justify-center lg:mb-0 lg:w-auto mr-8 items-center">
               <Image
@@ -67,8 +67,12 @@ const PostDetail = ({ post }) => {
           <h1 className="mb-8 text-3xl font-semibold">{post.title}</h1>
           {post.content.raw.children.map((typeObj, index) => {
             const children = typeObj.children.map((item, itemindex) => getContentFragment(itemindex, item.text, item));
-
-            return getContentFragment(index, children, typeObj, typeObj.type);
+            if(typeObj.type=="image"){
+              return <div className="grid grid-cols-1 place-content-center">{getContentFragment(index, children, typeObj, typeObj.type)}</div>;
+            }else{
+              return getContentFragment(index, children, typeObj, typeObj.type);
+            }
+            
           })}
         </div>
       </div>
