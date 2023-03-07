@@ -70,7 +70,7 @@ const PostDetail = ({ post }) => {
           {post.content.raw.children.map((typeObj, index) => {
             const children = typeObj.children.map((item, itemindex) => getContentFragment(itemindex, item.text, item));
             if(typeObj.type=="image"){
-              return <div className="flex justify-center items-center border-8 border-red-800">{getContentFragment(index, children, typeObj, typeObj.type)}</div>;
+              return <div className="flex justify-center items-center">{getContentFragment(index, children, typeObj, typeObj.type)}</div>;
             }else{
               return getContentFragment(index, children, typeObj, typeObj.type);
             }
