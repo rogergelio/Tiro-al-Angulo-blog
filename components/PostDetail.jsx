@@ -22,8 +22,10 @@ const PostDetail = ({ post }) => {
 
     switch (type) {
       case 'heading-three':
-        return <h3 key={index} className="text-xl font-semibold mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h3>;
-      case 'paragraph':
+        return <h3 key={index} className="text-l font-semibold mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h3>;
+        case 'heading-one':
+          return <h1 key={index} className="text-xl font-semibold mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h1>;
+        case 'paragraph':
         return <p key={index} className="mb-8 text-base">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</p>;
       case 'heading-four':
         return <h4 key={index} className="text-md font-semibold mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h4>;
@@ -50,7 +52,7 @@ const PostDetail = ({ post }) => {
         </div>
         <div className="px-4 ">
           <div className="flex items-center mb-8 w-full">
-            <div className="hidden md:flex items-center justify-center lg:mb-0 lg:w-auto mr-8 items-center">
+            <div className="hidden md:flex items-center justify-center lg:mb-0 lg:w-auto mr-8 items-center ">
               <Image
                 alt={post.author.name}
                 height="30px"
@@ -68,7 +70,7 @@ const PostDetail = ({ post }) => {
           {post.content.raw.children.map((typeObj, index) => {
             const children = typeObj.children.map((item, itemindex) => getContentFragment(itemindex, item.text, item));
             if(typeObj.type=="image"){
-              return <div className="grid grid-cols-1 place-content-center">{getContentFragment(index, children, typeObj, typeObj.type)}</div>;
+              return <div className="flex justify-center items-center border-8 border-red-800">{getContentFragment(index, children, typeObj, typeObj.type)}</div>;
             }else{
               return getContentFragment(index, children, typeObj, typeObj.type);
             }
