@@ -74,7 +74,6 @@ const PostDetail = ({ post }) => {
             }else{
               return getContentFragment(index, children, typeObj, typeObj.type);
             }
-            
           })}
         </div>
       </div>
